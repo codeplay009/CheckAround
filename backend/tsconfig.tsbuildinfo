@@ -1,0 +1,1 @@
+{"root":["./src/server.ts","./src/config/env.ts","./src/controllers/event.controller.ts","./src/routes/event.routes.ts","./src/scrapers/allevents.scraper.ts","./src/services/community-event.service.ts","./src/types/event.types.ts"],"version":"6.0.3"}

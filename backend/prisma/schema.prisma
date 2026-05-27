@@ -1,0 +1,51 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+}
+
+model Event {
+  id            String   @id @default(uuid())
+
+  // basic info
+  title         String
+  description   String?
+  category      String?
+  tags          Json?
+
+  // timing
+  startDate     String?
+  startTime     String?
+  dateText      String?
+
+  // media
+  imageUrl      String?
+
+  // source metadata
+  origin        String
+  source        String
+  sourceUrl     String?
+
+  // moderation
+  status        String   @default("pending")
+  reviewNote    String?
+  reviewedAt    DateTime?
+
+  // nested structured data
+  location      Json?
+  announcedBy   Json?
+  price         Json?
+  popularity    Json?
+
+  // geo support
+  latitude      Float?
+  longitude     Float?
+
+  // timestamps
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  scrapedAt     DateTime?
+} 
