@@ -288,7 +288,6 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-zinc-50 text-zinc-950">
-      <div style={{ fontSize: "60px", color: "red" }}>FRONTEND WORKING</div>
       <section className="border-b border-zinc-200 bg-white">
         <div className="mx-auto flex max-w-7xl flex-col gap-5 px-5 py-6 lg:flex-row lg:items-end lg:justify-between">
           <div>
