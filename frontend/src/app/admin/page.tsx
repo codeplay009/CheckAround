@@ -67,7 +67,9 @@ export default function AdminDashboard() {
     } catch (error) {
       setIsUnlocked(false);
       setEvents([]);
-      setMessage(error instanceof Error ? error.message : "Unable to load events");
+      setMessage(
+        error instanceof Error ? error.message : "Unable to load events",
+      );
     } finally {
       setIsLoading(false);
     }
@@ -198,7 +200,9 @@ export default function AdminDashboard() {
                       <div>
                         <h2 className="text-xl font-semibold">{event.title}</h2>
                         <p className="mt-1 text-sm text-zinc-600">
-                          {[event.dateText, eventPlace(event)].filter(Boolean).join(" · ")}
+                          {[event.dateText, eventPlace(event)]
+                            .filter(Boolean)
+                            .join(" · ")}
                         </p>
                       </div>
 
